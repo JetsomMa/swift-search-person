@@ -71,9 +71,9 @@ class UICircularRing: UIView, CAAnimationDelegate, UIGestureRecognizerDelegate {
         return progessLayer
     }
     
-    func getCGRect(radius:CGFloat = 1, offSetY: CGFloat = 0) -> CGRect {
+    func getCGRect(radius:CGFloat = 1, offSetY: CGFloat = 0, offSetHeight: CGFloat = 0) -> CGRect {
         let width = self.bounds.width * radius
         let height = self.bounds.width * radius
-        return CGRect(x: (self.bounds.width - width)/2 ,y: (self.bounds.height - height)/2 + offSetY, width: width, height: height)
+        return CGRect(x: (self.bounds.width - width)/2 ,y: (self.bounds.height - height)/2 + offSetY, width: width, height: height + offSetHeight)
     }
 }

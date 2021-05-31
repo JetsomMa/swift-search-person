@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         
         //光晕背景图
         let backgroundImageView = UIImageView(image:UIImage(named:"background"))
-        backgroundImageView.frame = progessView.getCGRect(radius: 0.9)//CGRect(x: view.bounds.midX - 190, y: 70, width: 380, height: 400)
+        backgroundImageView.frame = progessView.getCGRect(radius: 1.2)//CGRect(x: view.bounds.midX - 190, y: 70, width: 380, height: 400)
         progessView.addSubview(backgroundImageView)
         
         //生成外围虚线圈
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
         progessView.createOneLayer(strokeStart: 0, strokeEnd: 1, radius: 1.1, lineWidth: 3, color: "#3F414B", alpha: 0.4)
         progessView.createOneLayer(strokeStart: 0, strokeEnd: 1, radius: 0.9, lineWidth: 2, color: "#3F414B", alpha: 0.4)
         
-        aroundImageView.frame = progessView.getCGRect(radius: 0.2, offSetY: -40)
+        aroundImageView.frame = progessView.getCGRect(radius: 0.17, offSetY: -40, offSetHeight: 5)
         progessView.addSubview(aroundImageView)
         
         
